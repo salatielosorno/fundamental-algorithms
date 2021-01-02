@@ -1,0 +1,5 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Fundamental algorithms tests Greatest Common Divisor - Optimized 1`] = `17`;
+
+exports[`Fundamental algorithms tests Greatest Common Divisor 1`] = `17`;

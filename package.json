@@ -1,20 +1,28 @@
 {
-	"name": "typescript-starter",
+	"name": "fundamental-algorithms",
 	"version": "0.1.0",
-	"description": "Setup to start using TypeScript",
+	"description": "Fundamental algorithms",
 	"private": true,
 	"scripts": {
 		"prebuild": "rimraf ./build",
 		"build": "tsc",
-		"test": "echo \"Error: no test specified\" && exit 1",
+		"test": "jest",
+		"test:u": "jest -u",
 		"lint": "eslint . --ext .ts",
 		"lint-and-fix": "eslint . --ext .ts --fix",
 		"prettier-format": "prettier --config .prettierrc \"src/**/*.ts\" --write"
 	},
+	"jest":{
+		"roots": ["<rootDir>/src"],
+		"transform": {
+		  "^.+\\.tsx?$": "ts-jest"
+		},
+		"testMatch": ["**/__tests__/**/*.(e2e|unit).test.ts"]
+	},
 	"keywords": [],
 	"repository": {
 		"type": "git",
-		"url": "git+https://github.com/salatielosorno/typescript-starter.git"
+		"url": "git+https://github.com/salatielosorno/fundamental-algorithms.git"
 	},
 	"author": "Salatiel Osorno Linares",
 	"license": "ISC",
@@ -27,6 +35,11 @@
 		"eslint-plugin-prettier": "3.1.2",
 		"prettier": "2.0.2",
 		"rimraf": "3.0.2",
+		"ts-jest": "^26.4.4",
 		"typescript": "3.8.3"
+	},
+	"dependencies": {
+		"@types/jest": "26.0.19",
+		"jest": "26.6.3"
 	}
 }
